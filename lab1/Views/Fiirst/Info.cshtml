@@ -1,0 +1,25 @@
+﻿@model string
+@{
+    ViewData["Title"] = "not-effective";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>
+    <strong>
+        "Ужасно медленный убийца
+    </strong>
+    <br />@Model
+
+</h2>
+<body>
+    <address>
+        <a title="link" href="http://localhost:57183"><strong>Start</strong></a><br />
+        <a title="link" href="http://localhost:57183/Fiirst/Welcome"><strong>и вот чем занимался убийца</strong></a>
+    </address>
+
+    <adress>
+        <text> Сьемкой и дизайном занималась:</text>
+        <b> @ViewData["company"]</b>
+        <i>@ViewData["name"]</i>
+    </adress>
+</body>

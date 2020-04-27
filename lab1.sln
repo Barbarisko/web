@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.489
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab1", "lab1\lab1.csproj", "{5A783287-57CA-4548-B8C4-34D28499FD39}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataLayer", "DataLayer\DataLayer.csproj", "{D554317C-71BF-4076-9E38-4CB00CB153CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{137C63BD-8543-41F4-ACC6-BE029A48D1AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A783287-57CA-4548-B8C4-34D28499FD39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A783287-57CA-4548-B8C4-34D28499FD39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A783287-57CA-4548-B8C4-34D28499FD39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A783287-57CA-4548-B8C4-34D28499FD39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D554317C-71BF-4076-9E38-4CB00CB153CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D554317C-71BF-4076-9E38-4CB00CB153CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D554317C-71BF-4076-9E38-4CB00CB153CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D554317C-71BF-4076-9E38-4CB00CB153CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{137C63BD-8543-41F4-ACC6-BE029A48D1AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{137C63BD-8543-41F4-ACC6-BE029A48D1AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{137C63BD-8543-41F4-ACC6-BE029A48D1AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{137C63BD-8543-41F4-ACC6-BE029A48D1AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F7186544-E6FF-4D7F-BE46-E67C8074EA98}
+	EndGlobalSection
+EndGlobal

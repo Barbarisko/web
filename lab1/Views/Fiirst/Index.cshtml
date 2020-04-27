@@ -1,0 +1,32 @@
+﻿@model List<DataLayer.Entities.Product>
+@{
+    ViewData["Title"] = "Cake House";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>
+    sh*tposting starts here
+    <br /> @Model
+</h2>
+
+<div class="row">
+    <div class="col-md-12">
+        <ul>
+            @foreach (var item in Model)
+            {
+                <li>
+                    <h1> @item.Name @item.Price</h1>
+                    
+                </li>
+            }
+        </ul>
+       
+     
+    </div>
+</div>
+
+<p>
+    <br />Here you can go:
+    <br /><a title="линка" href="http://localhost:57183/Fiirst/Welcome">Welcome</a>
+    <br /><a title="линка" href="http://localhost:57183/Fiirst/Info?effectivness=not_that_much_effective">Info</a>
+</p>
