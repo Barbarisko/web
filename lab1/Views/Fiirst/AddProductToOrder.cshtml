@@ -1,0 +1,36 @@
+﻿@model BusinessLayer.Models.ProductModel
+@{
+    ViewData["Title"] = "Add to cart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2> Add your products " @ViewBag.Product.Name":</h2>
+<h4>Product</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="addProductsToOrder" asp-route-idcust=@ViewBag.Customer.Id asp-route-idorder=@ViewBag.Order.Id>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+
+        <p>
+            <text>
+                _________________________<br />
+                @Html.ActionLink("Back to orders", "productsFromOrder", new { idorder = ViewBag.Order.Id, idcust = ViewBag.Customer.Id })
+            </text>
+        </p>
+    </div>
+</div>

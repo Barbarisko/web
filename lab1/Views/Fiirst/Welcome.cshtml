@@ -2,17 +2,12 @@
 @{
     ViewData["Title"] = "Welcome";
     Layout = "~/Views/Shared/_Layout.cshtml";
-
 }
-
-<h2>
-    <br/> @Model</h2>
-
+<h2><br/> @Model</h2>
 <body>
     <br /><a title="link" href="http://localhost:57183/Fiirst/Info?effectivness=not_that_much_effective"><strong>за названием фильма сюда</strong>и</a>
     <br /><a title="link" href="http://localhost:57183"><strong>Start</strong></a>
     <br/>
-
     @for (int i = 0; i < (int)ViewData["ID"]; i++)
     {
         <li> @ViewData["uzhas"] </li>

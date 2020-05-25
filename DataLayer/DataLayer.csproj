@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
@@ -7,6 +7,8 @@
   <ItemGroup>
     <Compile Remove="Migrations\20200414135207_InitL.cs" />
     <Compile Remove="Migrations\20200414135207_InitL.Designer.cs" />
+    <Compile Remove="Migrations\20200427090109_ShopDb.cs" />
+    <Compile Remove="Migrations\20200427090109_ShopDb.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -16,6 +18,10 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
   </ItemGroup>
 
 </Project>

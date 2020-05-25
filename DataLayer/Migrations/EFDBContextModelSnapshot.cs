@@ -25,11 +25,13 @@ namespace DataLayer.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("DateOfBirth");
-
                     b.Property<string>("Name");
 
+                    b.Property<int>("ShopId");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("ShopId");
 
                     b.ToTable("Customers");
                 });
@@ -61,7 +63,7 @@ namespace DataLayer.Migrations
 
                     b.Property<int>("OrderId");
 
-                    b.Property<string>("Price");
+                    b.Property<int>("Price");
 
                     b.HasKey("Id");
 
@@ -108,10 +110,29 @@ namespace DataLayer.Migrations
                     b.ToTable("Properties");
                 });
 
+            modelBuilder.Entity("DataLayer.Entities.Shop", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Shops");
+                });
+
+            modelBuilder.Entity("DataLayer.Entities.Customer", b =>
+                {
+                    b.HasOne("DataLayer.Entities.Shop", "shop")
+                        .WithMany("customers")
+                        .HasForeignKey("ShopId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
             modelBuilder.Entity("DataLayer.Entities.Order", b =>
                 {
                     b.HasOne("DataLayer.Entities.Customer", "Customer")
-                        .WithMany()
+                        .WithMany("orders")
                         .HasForeignKey("CustomerId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });

@@ -16,14 +16,8 @@ namespace lab1
     {
         public static void Main(string[] args)
         {
-            var  host = CreateWebHostBuilder(args).Build();
-            using (var scope = host.Services.CreateScope())
-            {
-                var services = scope.ServiceProvider;
-                var context = services.GetRequiredService<EFDBContext>();
-                SampleData.InitData(context);
-            }
-            host.Run();
+            CreateWebHostBuilder(args).Build().Run();
+           
 
         }
 

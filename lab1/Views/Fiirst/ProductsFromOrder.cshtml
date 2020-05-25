@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewData["Title"] = "Products from your order";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <h2>Products from @ViewBag.Order.Id:</h2>
+
+@foreach (ProductModel pr in ViewBag.Order)
+{
+    <p>
+        <text>
+            <b>@pr.Name</b>: price = @pr.Price
+            |
+            @Html.ActionLink("Edit", "EditProduct", new { idCustomer = ViewBag.Customer.Id, idorder = ViewBag.Order.Id, idproduct = pr.Id })
+            |
+            @Html.ActionLink("Delete", "DeleteProductFromOrder", new { idCustomer = ViewBag.Customer.Id, idorder = ViewBag.Order.Id, idproduct = pr.Id })
+        </text>
+    </p>
+}
+
+<p>
+    @Html.ActionLink("Add product", "addProductToOrder", new { idCustomer = ViewBag.Customer.Id, idorder = ViewBag.Order.Id })
+</p>
+
+<p>
+    <text>
+        _________________________<br />
+        @Html.ActionLink("Back to list of orders", "OrdersFromCustomer", new { idCustomer = ViewBag.Customer.Id })
+    </text>
+</p>

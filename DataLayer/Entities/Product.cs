@@ -4,15 +4,14 @@ using System.Text;
 
 namespace DataLayer.Entities
 {
-    public class Product
+    public class Product:IDentity
     {
-        public int Id { get; set; }
         private string name;
-        public string Name { get { return name; } set {   name = value;  } }
-        //if (value != null)
-        private string price;
-        public string Price { get { return price; } set {  price = value;  } }
-        //if (value >= 0)
+        public string Name { get { return name; } set { if (value != null) name = value;  } }
+        //
+        private int price;
+        public int Price { get { return price; } set { if (value >= 0) price = value;  } }
+        //
         public int OrderId { get; set; }
         public Order Order { get; set; }
 

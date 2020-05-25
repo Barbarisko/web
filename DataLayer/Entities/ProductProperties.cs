@@ -4,9 +4,8 @@ using System.Text;
 
 namespace DataLayer.Entities
 {
-    public class ProductProperties
+    public class ProductProperties:IDentity
     {
-        public int Id { get; set; }
 
         public int ProductId { get; set; }
         public Product Product { get; set; }

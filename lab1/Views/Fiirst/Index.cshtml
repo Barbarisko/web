@@ -1,27 +1,25 @@
-﻿@model List<DataLayer.Entities.Product>
-@{
+﻿@{
     ViewData["Title"] = "Cake House";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<h1>
+    <br /> sh*tposting starts here
+</h1>
 
-<h2>
-    sh*tposting starts here
-    <br /> @Model
-</h2>
+<h3>Today's customers:</h3>
 
 <div class="row">
     <div class="col-md-12">
         <ul>
-            @foreach (var item in Model)
+            @foreach (CustomerModel customer in ViewBag.customers)
             {
                 <li>
-                    <h1> @item.Name @item.Price</h1>
-                    
+                    <h2>
+                        <b>@Html.ActionLink(customer.Name, "ordersFromCustomer", new { id = customer.Id })</b>
+                    </h2>
                 </li>
             }
         </ul>
-       
-     
     </div>
 </div>
 
@@ -30,3 +28,6 @@
     <br /><a title="линка" href="http://localhost:57183/Fiirst/Welcome">Welcome</a>
     <br /><a title="линка" href="http://localhost:57183/Fiirst/Info?effectivness=not_that_much_effective">Info</a>
 </p>
+
+
+

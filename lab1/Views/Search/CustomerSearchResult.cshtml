@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewData["Title"] = "AlbumSearchResults";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Results:</h2>
+
+
+
+..поработать
+
+
+
+@foreach (AlbumModel album in ViewBag.Fa)
+{
+    <p>
+        <text>
+            @album.Name
+        </text>
+    </p>
+}
+
+@if (ViewBag.FaCount < 1)
+{
+    <p>
+        <text>
+            No matches!
+        </text>
+    </p>
+}
+

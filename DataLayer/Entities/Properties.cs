@@ -9,20 +9,20 @@ namespace DataLayer.Entities
         public int Id { get; set; }
 
         private int mass;
-        public int Mass { get { return mass; } set {  mass = value; } }
-        //if (value > 0)
+        public int Mass { get { return mass; } set { if (value > 0)  mass = value; } }
+        //
 
         private string mainIngr;
-        public string MainIng { get { return mainIngr; } set { mainIngr = value; } }
-        // if (value != null)
+        public string MainIng { get { return mainIngr; } set { if (value != null) mainIngr = value; } }
+        //
 
         private DateTime dateOfCreate;
-        public DateTime DateOfCreate { get { return dateOfCreate; } set {  dateOfCreate = value; } }
-        //if (value < DateTime.Now && value > DateTime.MinValue)
+        public DateTime DateOfCreate { get { return dateOfCreate; } set { if (value < DateTime.Now && value > DateTime.MinValue) dateOfCreate = value; } }
+        //
 
         private DateTime expireDate;
-        public DateTime ExpireDate { get { return expireDate; } set {  expireDate = value; } }
-        //if (value >= DateTime.Now)
+        public DateTime ExpireDate { get { return expireDate; } set { if (value >= DateTime.Now) expireDate = value; } }
+        //
 
 
     }
