@@ -38,7 +38,7 @@ namespace lab1.Controllers
         public async Task<IActionResult> Logout()
         {
             await signInManager.SignOutAsync();
-            return RedirectToAction("Index", "MediaPlayer");
+            return RedirectToAction("Index", "Fiirst");
         }
 
         [HttpGet]
@@ -87,7 +87,7 @@ namespace lab1.Controllers
         {
             if (userId == null || token == null)
             {
-                return RedirectToAction("Index", "MediaPlayer");
+                return RedirectToAction("Index", "Fiirst");
             }
 
             var user = await userManager.FindByIdAsync(userId);
@@ -125,7 +125,7 @@ namespace lab1.Controllers
                 if (result.Succeeded)
                 {
 
-                    return RedirectToAction("Index", "MediaPlayer");
+                    return RedirectToAction("Index", "Fiirst");
                 }
 
                 ModelState.AddModelError("", "Invalid Login Attempt");

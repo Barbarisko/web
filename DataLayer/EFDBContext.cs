@@ -1,4 +1,6 @@
-﻿using DataLayer.Entities;
+﻿using BusinessLayer.Models;
+using DataLayer.Entities;
+using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using System;
@@ -7,7 +9,7 @@ using System.Text;
 
 namespace DataLayer
 {
-    public class EFDBContext: DbContext
+    public class EFDBContext : IdentityDbContext<AppUser>
     { 
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Product> Products { get; set; }

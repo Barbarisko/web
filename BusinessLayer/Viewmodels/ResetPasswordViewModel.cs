@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace BusinessLayer.Viewmodels
+{ 
 	public class ResetPasswordViewModel
 	{
 		[Required]
